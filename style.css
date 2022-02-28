@@ -37,10 +37,13 @@ nav {
   font-size: 28px;
   color: #0e0d0f;
 }
-nav img {
+nav .logo img {
   height: 90px;
+  transition: all 300ms ease-in;
 }
-
+nav .logo img:hover {
+  transform: scale(1.05);
+}
 .navList ul {
   list-style: none;
   display: flex;
@@ -56,11 +59,18 @@ nav img {
   font-size: 0.9em;
   font-weight: 500;
   letter-spacing: 0.15em;
+  transition: all 300ms ease-in;
 }
+
 .navList ul li:last-of-type a {
   background: #ff3298;
   color: #0e0d0f;
   border-radius: 8px;
+  border: 1px solid transparent;
+}
+.navList ul li:last-of-type a:hover {
+  border-color: #ff3298;
+  background: transparent;
 }
 
 main {
@@ -133,6 +143,7 @@ header .title h1 {
   height: 100%;
   width: 100%;
   object-fit: cover;
+  object-position: top;
 }
 
 .bottomBorder {
@@ -186,6 +197,11 @@ section.aboutMain {
   font-weight: 500;
   font-size: 1.25rem;
   border-radius: 8px;
+  transition: all 300ms ease-in;
+}
+.aboutMain .leftBottom a:hover {
+  background: #47205c;
+  color: #ff3298;
 }
 .aboutMain .rightTop {
   width: 50%;
@@ -315,9 +331,13 @@ footer .social a {
   margin: 0 0.75em;
   font-size: 26px;
   color: #0e0d0f;
+  transition: all 300ms ease-in;
 }
 footer .social a:nth-of-type(1) {
   margin-left: 0;
+}
+footer .social a:hover {
+  color: #ff3298;
 }
 footer img {
   width: 160px;

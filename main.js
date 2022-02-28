@@ -7,9 +7,9 @@ const swiper = new Swiper('.swiper', {
     delay: 5000,
   },
   // If we need pagination
-  pagination: {
-    el: '.swiper-pagination',
-  },
+  // pagination: {
+  //   el: '.swiper-pagination',
+  // },
 })
 
 $(document).ready(function () {
@@ -24,3 +24,22 @@ $(document).ready(function () {
     }
   })
 })
+
+$('.navList ul li a').hover(
+  function () {
+    var scroll = $(window).scrollTop()
+    if (scroll > 100) {
+      $(this).css('color', '#ff3298')
+    } else {
+      $(this).css('color', '#B01A65')
+    }
+  },
+  function () {
+    var scroll = $(window).scrollTop()
+    if (scroll > 100) {
+      $(this).css('color', '#F8EDEB')
+    } else {
+      $(this).css('color', '#0e0d0f')
+    }
+  }
+)

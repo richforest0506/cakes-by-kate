@@ -11,35 +11,56 @@ const swiper = new Swiper('.swiper', {
   //   el: '.swiper-pagination',
   // },
 })
+$('.burger').click(function () {
+  $('.navList').toggleClass('active')
+})
 
 $(document).ready(function () {
   $(window).scroll(function () {
     var scroll = $(window).scrollTop()
     if (scroll > 100) {
       $('nav').css('background', '#13031C')
+      $('.navList').css('background', '#13031c')
       $('.navList ul li a').css('color', '#F8EDEB')
+      $('.burger').css('color', '#ff3298')
     } else {
       $('nav').css('background', 'transparent')
+      $('.navList').css('background', '#F8EDEB')
       $('.navList ul li a').css('color', '#0e0d0f')
+      $('.burger').css('color', '#0e0d0f')
     }
   })
 })
+// $(document).ready(function () {
+//   $(window).scroll(function () {
+//     var scroll = $(window).scrollTop()
+//     if (scroll > 100) {
+//       $('nav').css('background', '#13031C')
+//       $('.navList ul li a').css('color', '#F8EDEB')
+//       $('.burger').css('color', '#ff3298')
+//     } else {
+//       $('nav').css('background', 'transparent')
+//       $('.navList ul li a').css('color', '#0e0d0f')
+//       $('.burger').css('color', '#0e0d0f')
+//     }
+//   })
+// })
 
-$('.navList ul li a').hover(
-  function () {
-    var scroll = $(window).scrollTop()
-    if (scroll > 100) {
-      $(this).css('color', '#ff3298')
-    } else {
-      $(this).css('color', '#B01A65')
-    }
-  },
-  function () {
-    var scroll = $(window).scrollTop()
-    if (scroll > 100) {
-      $(this).css('color', '#F8EDEB')
-    } else {
-      $(this).css('color', '#0e0d0f')
-    }
-  }
-)
+// $('.navList ul li a').hover(
+//   function () {
+//     var scroll = $(window).scrollTop()
+//     if (scroll > 100) {
+//       $(this).css('color', '#ff3298')
+//     } else {
+//       $(this).css('color', '#B01A65')
+//     }
+//   },
+//   function () {
+//     var scroll = $(window).scrollTop()
+//     if (scroll > 100) {
+//       $(this).css('color', '#F8EDEB')
+//     } else {
+//       $(this).css('color', '#0e0d0f')
+//     }
+//   }
+// )

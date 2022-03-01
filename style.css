@@ -29,20 +29,26 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  transition: all 300ms var(--cubicBounce);
+  transition: all 300ms ease;
   /* transition: all 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86); */
 }
 .burger {
   display: none;
   font-size: 28px;
   color: #0e0d0f;
+  cursor: pointer;
+  transition: all 300ms ease;
 }
+
 nav .logo img {
   height: 90px;
   transition: all 300ms ease-in;
 }
 nav .logo img:hover {
   transform: scale(1.05);
+}
+.navList {
+  transition: all 300ms ease;
 }
 .navList ul {
   list-style: none;
@@ -51,7 +57,7 @@ nav .logo img:hover {
   align-items: center;
 }
 .navList ul li {
-  margin: 0 15px;
+  margin: 0 1.2vw;
 }
 .navList ul li a {
   padding: 0.5em 0.65em;
@@ -101,10 +107,19 @@ main header::before {
     transparent 42%
   );
 }
-
+main header::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.19);
+}
 header .title {
   position: relative;
-  z-index: 2;
+  z-index: 3;
   color: #f8edeb;
   display: flex;
   justify-content: center;
@@ -118,7 +133,7 @@ header .title p {
   padding: 0 15px;
   margin-bottom: 20px;
   /* font-size: 3rem; */
-  font-size: clamp(2.5rem, 2.234rem + 0.8511vw, 3rem);
+  font-size: clamp(1.8rem, 1.1617rem + 2.0426vw, 3rem);
   background-color: rgba(71, 32, 92, 0.4);
   border-radius: 8px;
 }
@@ -126,7 +141,7 @@ header .title h1 {
   margin-right: 30px;
   padding: 0 15px 0 30px;
   /* font-size: 4.5rem; */
-  font-size: clamp(4rem, 3.734rem + 0.8511vw, 4.5rem);
+  font-size: clamp(2.8rem, 2.1617rem + 2.0426vw, 4rem);
   background-color: rgba(71, 32, 92, 0.4);
   border-radius: 8px;
 }
@@ -185,21 +200,22 @@ section.aboutMain {
   height: 100%;
 }
 .aboutMain .leftBottom h2 {
-  font-size: 2.75rem;
+  font-size: clamp(1.75rem, 1.2181rem + 1.7021vw, 2.75rem);
   padding-left: 0.5em;
 }
 .aboutMain .leftBottom p {
   margin: 1em 0 2.5em;
   max-width: 90%;
   line-height: 1.55;
-  font-size: 1.1rem;
+  /* font-size: 1.1rem; */
+  font-size: clamp(0.89rem, 0.7783rem + 0.3574vw, 1.1rem);
 }
 .aboutMain .leftBottom a {
   padding: 0.5em 1em;
   background: #ff3298;
   color: #f8edeb;
   font-weight: 500;
-  font-size: 1.25rem;
+  font-size: clamp(1.15rem, 1.0968rem + 0.1702vw, 1.25rem);
   border-radius: 8px;
   transition: all 300ms ease-in;
 }
@@ -255,7 +271,7 @@ section.bakeshopMain {
 
 .bakeshopMain h2 {
   margin-bottom: 0.5em;
-  font-size: 3.5em;
+  font-size: clamp(2.3rem, 1.6617rem + 2.0426vw, 3.5rem);
   text-align: right;
 }
 
@@ -304,7 +320,7 @@ section.bakeshopMain {
 .bakeshopMain .imgGrid a .content span {
   width: 100%;
   padding: 0.25em 0;
-  font-size: 28px;
+  font-size: clamp(1.5rem, 1.367rem + 0.4255vw, 1.75rem);
   text-align: center;
   background: #f8edeb;
 }
@@ -384,10 +400,7 @@ footer .info span:first-of-type {
     margin: 0;
   }
 }
-@media (max-width: 750px) {
-  section.aboutMain {
-    padding: 12em 1em 6em;
-  }
+@media (max-width: 955px) {
   .burger {
     display: block;
   }
@@ -398,19 +411,38 @@ footer .info span:first-of-type {
     height: 50%;
     width: 100%;
     transform: translateY(-150%);
-    background: #ff3298;
+    background: #f8edeb;
     display: flex;
     justify-content: center;
     align-items: center;
   }
+
   .navList ul {
     height: 100%;
     flex-direction: column;
     justify-content: space-evenly;
   }
-  section.bakeshopMain {
+  .active {
+    transform: translateY(0);
+  }
+}
+@media (max-width: 750px) {
+  section.aboutMain {
+    padding: 12em 1em 6em;
+  }
+
+  section.bakeshopMain,
+  main header {
     padding-right: 0;
     padding-left: 0;
+  }
+  main header {
+    padding-bottom: 3em;
+    align-items: flex-end;
+  }
+  main header .title h1 {
+    margin-right: 0;
+    padding: 0;
   }
   .aboutMain .rightTop .cont .boxPink,
   .aboutMain .rightTop .cont .boxPurple {
@@ -422,11 +454,21 @@ footer .info span:first-of-type {
   .bakeshopMain .imgGrid a {
     width: 100%;
   }
+  nav,
   footer {
     padding-left: 0.5em;
     padding-right: 0.5em;
   }
   footer img {
     width: 120px;
+  }
+}
+
+@media (max-width: 374px) {
+  main header .title p {
+    margin-bottom: 5px;
+  }
+  footer img {
+    width: 90px;
   }
 }

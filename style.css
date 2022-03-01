@@ -117,14 +117,18 @@ header .title p {
   display: inline-block;
   padding: 0 15px;
   margin-bottom: 20px;
-  font-size: 3rem;
-  background-color: rgba(0, 0, 0, 0.4);
+  /* font-size: 3rem; */
+  font-size: clamp(2.5rem, 2.234rem + 0.8511vw, 3rem);
+  background-color: rgba(71, 32, 92, 0.4);
+  border-radius: 8px;
 }
 header .title h1 {
   margin-right: 30px;
   padding: 0 15px 0 30px;
-  font-size: 4.5rem;
-  background-color: rgba(0, 0, 0, 0.4);
+  /* font-size: 4.5rem; */
+  font-size: clamp(4rem, 3.734rem + 0.8511vw, 4.5rem);
+  background-color: rgba(71, 32, 92, 0.4);
+  border-radius: 8px;
 }
 
 .swiper {
@@ -325,29 +329,40 @@ footer .info {
   font-size: 13px;
 }
 footer .social {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-bottom: 10px;
 }
 footer .social a {
-  margin: 0 0.75em;
-  font-size: 26px;
+  font-size: calc(1.25rem + ((1vw - 0.52px) * 0.3212));
+
   color: #0e0d0f;
   transition: all 300ms ease-in;
 }
-footer .social a:nth-of-type(1) {
-  margin-left: 0;
-}
+
 footer .social a:hover {
   color: #ff3298;
 }
 footer img {
   width: 160px;
+  transition: all 300ms ease;
 }
 
-footer .info span {
+footer img:hover {
+  transform: scale(1.05);
+}
+footer span {
   display: block;
+}
+footer .info span:first-of-type {
   margin: 4px 0;
   font-size: 1rem;
   font-weight: 700;
+}
+.rights {
+  position: relative;
+  font-size: 1rem;
 }
 
 @media (max-width: 1000px) {
@@ -406,5 +421,12 @@ footer .info span {
   }
   .bakeshopMain .imgGrid a {
     width: 100%;
+  }
+  footer {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+  footer img {
+    width: 120px;
   }
 }

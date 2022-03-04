@@ -31,20 +31,6 @@ $(document).ready(function () {
     }
   })
 })
-// $(document).ready(function () {
-//   $(window).scroll(function () {
-//     var scroll = $(window).scrollTop()
-//     if (scroll > 100) {
-//       $('nav').css('background', '#13031C')
-//       $('.navList ul li a').css('color', '#F8EDEB')
-//       $('.burger').css('color', '#ff3298')
-//     } else {
-//       $('nav').css('background', 'transparent')
-//       $('.navList ul li a').css('color', '#0e0d0f')
-//       $('.burger').css('color', '#0e0d0f')
-//     }
-//   })
-// })
 
 // $('.navList ul li a').hover(
 //   function () {

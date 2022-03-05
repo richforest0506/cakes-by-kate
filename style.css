@@ -322,7 +322,8 @@ section.bakeshopMain {
   padding: 0.25em 0;
   font-size: clamp(1.5rem, 1.367rem + 0.4255vw, 1.75rem);
   text-align: center;
-  background: #f8edeb;
+  background: rgba(248, 237, 235, 1);
+  color: #000;
 }
 .bakeshopMain .imgGrid a:hover .content {
   transform: scale(1);
@@ -464,6 +465,17 @@ footer .info span:first-of-type {
   }
 }
 @media (max-width: 456px) {
+  .aboutMain .rightTop .cont .boxPurple {
+    width: 98%;
+  }
+  .bakeshopMain .imgGrid a .content {
+    transform: scale(1);
+    background: rgba(255, 50, 152, 0.33);
+  }
+  .bakeshopMain .imgGrid a .content span {
+    background: rgba(248, 237, 235, 0.75);
+    color: #000;
+  }
   footer {
     padding: 1.5em;
     flex-direction: column;

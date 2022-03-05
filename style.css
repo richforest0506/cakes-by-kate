@@ -460,16 +460,17 @@ footer .info span:first-of-type {
     padding-right: 0.5em;
   }
   footer img {
-    margin: 8px 0;
     width: 120px;
   }
 }
 @media (max-width: 456px) {
   footer {
+    padding: 1.5em;
     flex-direction: column;
     justify-content: center;
   }
   footer img {
+    margin: 8px 0;
     width: 130px;
   }
 }

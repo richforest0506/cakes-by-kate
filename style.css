@@ -2,6 +2,18 @@
 :root {
   --cubicBounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
+
+/* #0E0D0F - Rich Black
+#13031C - Xiketic
+#47205C - Russian Violet
+#5D3573 - Eminence
+#8549A6 - Royal Purple
+#009AFF - Dodger Blue
+#BO1A65 - Jazzberry Jam
+#FF3298 - Rose Bonbon
+#F799C8 - Kobi
+#F8EDEB - Seashell */
+
 * {
   margin: 0;
   padding: 0;
@@ -427,7 +439,7 @@ footer .info span:first-of-type {
     transform: translateY(0);
   }
 }
-@media (max-width: 750px) {
+@media (max-width: 768px) {
   section.aboutMain {
     padding: 12em 1em 6em;
   }
@@ -455,6 +467,15 @@ footer .info span:first-of-type {
   .bakeshopMain .imgGrid a {
     width: 100%;
   }
+  .bakeshopMain .imgGrid a .content {
+    transform: scale(1);
+    background: transparent;
+  }
+  .bakeshopMain .imgGrid a .content span {
+    background: rgba(248, 237, 235, 0.75);
+    color: #000;
+    text-decoration: underline;
+  }
   nav,
   footer {
     padding-left: 0.5em;
@@ -468,14 +489,7 @@ footer .info span:first-of-type {
   .aboutMain .rightTop .cont .boxPurple {
     width: 98%;
   }
-  .bakeshopMain .imgGrid a .content {
-    transform: scale(1);
-    background: rgba(255, 50, 152, 0.33);
-  }
-  .bakeshopMain .imgGrid a .content span {
-    background: rgba(248, 237, 235, 0.75);
-    color: #000;
-  }
+
   footer {
     padding: 1.5em;
     flex-direction: column;

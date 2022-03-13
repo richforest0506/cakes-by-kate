@@ -13,6 +13,11 @@ const swiper = new Swiper('.swiper', {
 })
 $('.burger').click(function () {
   $('.navList').toggleClass('active')
+  if ($('.navList').hasClass('active')) {
+    document.body.style.overflow = 'hidden'
+  } else {
+    document.body.style.overflow = 'scroll'
+  }
 })
 
 $(document).ready(function () {

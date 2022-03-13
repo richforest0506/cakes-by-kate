@@ -82,10 +82,10 @@ nav .logo img:hover {
 
 .navList ul li:last-of-type a {
   background: #ff3298;
-  color: #0e0d0f;
   border-radius: 8px;
   border: 1px solid transparent;
 }
+
 .navList ul li:last-of-type a:hover {
   border-color: #ff3298;
   background: transparent;
@@ -145,7 +145,8 @@ header .title p {
   padding: 0 15px;
   margin-bottom: 20px;
   /* font-size: 3rem; */
-  font-size: clamp(1.8rem, 1.1617rem + 2.0426vw, 3rem);
+  /* font-size: clamp(1.8rem, 1.1617rem + 2.0426vw, 3rem); */
+  font-size: clamp(2.3rem, 1.1617rem + 2.0426vw, 3.5rem);
   background-color: rgba(71, 32, 92, 0.4);
   border-radius: 8px;
 }
@@ -153,9 +154,34 @@ header .title h1 {
   margin-right: 30px;
   padding: 0 15px 0 30px;
   /* font-size: 4.5rem; */
-  font-size: clamp(2.8rem, 2.1617rem + 2.0426vw, 4rem);
+  /* font-size: clamp(2.8rem, 2.1617rem + 2.0426vw, 4rem); */
+  font-size: clamp(3.3rem, 2.1617rem + 2.0426vw, 4.5rem);
   background-color: rgba(71, 32, 92, 0.4);
   border-radius: 8px;
+}
+header .title .links {
+  width: 100%;
+  padding-right: 30px;
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+header .title .links a {
+  width: 13vw;
+  min-width: 200px;
+  padding: 0.5em 0;
+  background: #ff3298;
+  color: #f8edeb;
+  font-weight: 500;
+  font-size: clamp(1.55rem, 1.0968rem + 0.1702vw, 2rem);
+  text-align: center;
+  border-radius: 8px;
+  transition: all 300ms ease-in;
+}
+header .title .links a:hover {
+  background: #47205c;
+  color: #ff3298;
 }
 
 .swiper {
@@ -289,6 +315,7 @@ section.bakeshopMain {
 
 .bakeshopMain .imgGrid {
   max-width: 1440px;
+  margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -452,6 +479,9 @@ footer .info span:first-of-type {
   main header {
     padding-bottom: 3em;
     align-items: flex-end;
+  }
+  main header .title {
+    width: 100%;
   }
   main header .title h1 {
     margin-right: 0;

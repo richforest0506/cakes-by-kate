@@ -6,11 +6,8 @@ const swiper = new Swiper('.swiper', {
   autoplay: {
     delay: 5000,
   },
-  // If we need pagination
-  // pagination: {
-  //   el: '.swiper-pagination',
-  // },
 })
+
 $('.burger').click(function () {
   $('.navList').toggleClass('active')
   if ($('.navList').hasClass('active')) {
@@ -34,6 +31,14 @@ $(document).ready(function () {
       $('.navList ul li a').css('color', '#0e0d0f')
       $('.burger').css('color', '#0e0d0f')
     }
+  })
+})
+
+const fkLnk = document.querySelectorAll('.fkLnk')
+
+fkLnk.forEach((lnk) => {
+  lnk.addEventListener('click', (e) => {
+    e.preventDefault()
   })
 })
 

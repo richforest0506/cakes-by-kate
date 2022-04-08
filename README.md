@@ -9,6 +9,7 @@ A landing page for a cake business.
 #### Technologies
 
 - jQuery
+- Swiper JS
 - Figma
 
 #### Credit

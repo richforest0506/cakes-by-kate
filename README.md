@@ -6,6 +6,8 @@
 
 A landing page for a cake business.
 
+[Live Link](https://cakesbykate.netlify.app)
+
 #### Technologies
 
 - jQuery
